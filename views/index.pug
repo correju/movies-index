@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title THE MOVIE INDEX
+    base(href='/')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    link(href='./css/main.css', rel='stylesheet')
+  body(ng-controller="searchController as search")
+    div(class="mask" ng-show="search.show")
+      i(class="glyphicon glyphicon-refresh")
+    main
+      header
+        h1 THE MOVIE INDEX
+      nav
+        i(class="glyphicon glyphicon-search my-search")
+        input(type="text" ng-model="search.searchText" placeholder="Write here to Search for a movies, tv show, person" ng-change="search.search()")
+      div(class="search-panel" ng-show="search.showPanel")
+        search-panel(data="search.data")
+      section( class="router" ui-view='')
+
+    script(src='https://code.jquery.com/jquery-3.1.1.min.js', integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=', crossorigin='anonymous')
+    script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+    script(src='bundle.js')
