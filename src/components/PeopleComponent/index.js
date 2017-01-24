@@ -18,9 +18,9 @@ export default {
                         <h2>Movies</h2>
                         <table class="table">
                             <thead>
+                                <th>Character</th>
                                 <th>Year</th>
                                 <th>Title</th>
-                                <th>Character</th>
                             </thead>
                             <tbody>
                                 <tr ng-repeat="movie in $ctrl.castMovies">
@@ -35,9 +35,9 @@ export default {
                         <h2>TV</h2>
                         <table class="table">
                             <thead>
+                                <th>Character</th>
                                 <th>Year</th>
                                 <th>Title</th>
-                                <th>Character</th>
                             </thead>
                             <tbody>
                                 <tr ng-repeat="movie in $ctrl.castMovies">
