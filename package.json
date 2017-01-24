@@ -1,5 +1,5 @@
 {
-  "name": "the movie Index",
+  "name": "movies",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
