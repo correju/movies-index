@@ -32,7 +32,7 @@ export default class PeopleController {
                             return e
                         })
 
-                        this.castTv = this.castMovies.sort((a, b) => {
+                        this.castTv = this.castTv.sort((a, b) => {
                             return a.timestamp - b.timestamp
                         })
 

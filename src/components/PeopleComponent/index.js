@@ -40,10 +40,10 @@ export default {
                                 <th>Title</th>
                             </thead>
                             <tbody>
-                                <tr ng-repeat="movie in $ctrl.castMovies">
-                                    <td>{{movie.character}}</td>
-                                    <td>{{movie.release_date}}</td>
-                                    <td>{{movie.original_title}}</td>
+                                <tr ng-repeat="tv in $ctrl.castTv">
+                                    <td>{{tv.character}}</td>
+                                    <td>{{tv.first_air_date}}</td>
+                                    <td>{{tv.name}}</td>
                                 </tr>
                             </tbody>
                         </table>
