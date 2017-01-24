@@ -8,7 +8,7 @@ export default class MovieTVService {
         configurationService = $configurationService
     }
     getMovie (id) {
-        let key = configurationService.getKey()
+        let key = configurationService.getKey() || api_key
         return http.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${key}&language=en-US`)
         //return http.get(`https://api.themoviedb.org/3/person/${id}?api_key=${api_key}&language=en-US`)
 

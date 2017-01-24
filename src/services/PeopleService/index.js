@@ -7,7 +7,7 @@ export default class PeopleService {
         configurationService = $configurationService
     }
     getPerson (id) {
-        let key = configurationService.getKey()
+        let key = configurationService.getKey() || api_key
         return http.get(`https://api.themoviedb.org/3/person/${id}?api_key=${key}&language=en-US`)
     }
     getMovieCredits (id) {
