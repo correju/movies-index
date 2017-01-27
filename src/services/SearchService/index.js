@@ -1,13 +1,14 @@
-import { api_key } from '../../settings/'
-
+let configurationService;
 const HTTP = new WeakMap();
 export default class SearchService {
-    constructor ($http) {
+    constructor ($http,$configurationService) {
+        configurationService = $configurationService;
         HTTP.set(this, $http);
     }
     search (query) {
-        return HTTP.get(this).get(`https://api.themoviedb.org/3/search/multi?api_key=${api_key}&language=en-US&query=${query}`)
+        let key = configurationService.getKey()
+        return HTTP.get(this).get(`https://api.themoviedb.org/3/search/multi?api_key=${key}&language=en-US&query=${query}`)
     }
 }
 
-SearchService.$inject = ['$http']
+SearchService.$inject = ['$http', 'configurationService']
